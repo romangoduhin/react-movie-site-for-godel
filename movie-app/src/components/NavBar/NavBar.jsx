@@ -9,7 +9,7 @@ import moviesAPI from '../../services/movieAPI';
 import { ReactComponent as SearchIcon } from '../../assets/SearchIcon.svg';
 import { ReactComponent as BurgerIcon } from '../../assets/BurgerIcon.svg';
 import { ReactComponent as CloseIcon } from '../../assets/CloseIcon.svg';
-import Overlay from '../Overlay/Overlay';
+import Overlay from '../Overlay';
 
 function NavBar() {
   const { userId } = useSelector((state) => state.auth);

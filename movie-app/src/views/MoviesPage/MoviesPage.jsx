@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import style from './MoviesPage.module.scss';
-import MoviesList from '../../components/MoviesList/MoviesList';
-import Loader from '../../components/Loader/Loader';
-import ModalWindow from '../../components/ModalWindow/ModalWindow';
-import PlayButton from '../../components/PlayButton/PlayButton';
+import MoviesList from '../../components/MoviesList';
+import Loader from '../../components/Loader';
+import ModalWindow from '../../components/ModalWindow';
+import PlayButton from '../../components/PlayButton';
 
 function MoviesPage({
   nowPlaying, topRated, popular, upcoming,

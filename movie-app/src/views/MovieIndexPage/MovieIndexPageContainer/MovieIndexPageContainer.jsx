@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import movieAPI from '../../../services/movieAPI';
 import MovieIndexPage from '../MovieIndexPage';
-import Loader from '../../../components/Loader/Loader';
+import Loader from '../../../components/Loader';
 import withAuthRedirect from '../../../hoc/withAuthRedirect';
 
 function MovieIndexPageContainer() {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import MoviesPage from '../MoviesPage';
-import Loader from '../../../components/Loader/Loader';
+import MoviesPage from "../MoviesPage";
+import Loader from '../../../components/Loader';
 import { setAllMoviesTypesThunk } from '../../../redux/thunks/moviesThunks';
 
 function MoviesPageContainer() {

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import style from './MoviePoster.module.scss';
-import ModalWindow from '../ModalWindow/ModalWindow';
-import Loader from '../Loader/Loader';
-import Rating from '../Rating/Rating';
-import PlayButton from '../PlayButton/PlayButton';
+import ModalWindow from '../ModalWindow';
+import Loader from '../Loader';
+import Rating from '../Rating';
+import PlayButton from '../PlayButton';
 
 function MoviePoster({ movie }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
