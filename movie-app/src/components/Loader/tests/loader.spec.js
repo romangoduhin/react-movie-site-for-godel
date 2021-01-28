@@ -1,6 +1,5 @@
 import React from 'react';
-import Loader from '../index';
-import { shallow } from 'enzyme';
+import Loader from '../Loader';
 
 describe('should render Loader component', () => {
   it('should contain .wrapper .loader .first .second .third', () => {
