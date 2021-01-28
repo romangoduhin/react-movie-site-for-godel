@@ -2,13 +2,14 @@ import React from 'react';
 import './App.scss';
 import { Redirect, Route, BrowserRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import AuthPage from '../views/AuthPage/AuthPage';
-import NavBar from '../components/NavBar/NavBar';
-import MovieIndexPageContainer from '../views/MovieIndexPage/MovieIndexPageContainer/MovieIndexPageContainer';
-import CategoryMoviesPageContainer from '../views/CategoryMoviesPage/CategoryMoviesPageContainer/CategoryMoviesPageContainer';
+import AuthPage from '../views/AuthPage';
+import NavBar from '../components/NavBar';
 import fire from '../lib/Firebase/fire';
 import { setAuthUserData } from '../redux/actions/authActions';
-import MoviesPageContainer from '../views/MoviesPage/MoviesPageContainer/MoviesPageContainer';
+import MoviesPageContainer from "../views/MoviesPage/MoviesPageContainer";
+import CategoryMoviesPageContainer from "../views/CategoryMoviesPage/CategoryMoviesPageContainer";
+import MovieIndexPageContainer from "../views/MovieIndexPage/MovieIndexPageContainer";
+
 
 function App() {
   const dispatch = useDispatch();

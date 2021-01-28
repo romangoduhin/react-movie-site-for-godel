@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './MovieIndexPage.module.scss';
-import ModalWindow from '../../components/ModalWindow/ModalWindow';
-import Loader from '../../components/Loader/Loader';
-import PlayButton from '../../components/PlayButton/PlayButton';
-import Rating from '../../components/Rating/Rating';
+import ModalWindow from '../../components/ModalWindow';
+import Loader from '../../components/Loader';
+import PlayButton from '../../components/PlayButton';
+import Rating from '../../components/Rating';
 
 function MovieIndexPage({ movie, reviews }) {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Portal from './Portal/Portal';
+import Portal from './Portal';
 import style from './ModalWindow.module.scss';
 import movieAPI from '../../services/movieAPI';
-import Loader from '../Loader/Loader';
-import Overlay from '../Overlay/Overlay';
+import Loader from '../Loader';
+import Overlay from '../Overlay';
 
 function ModalWindow({ movieId, handleOpenTrailer }) {
   const [trailerKey, setTrailerKey] = useState(null);

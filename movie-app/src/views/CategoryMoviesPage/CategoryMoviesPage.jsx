@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './CategoryMoviesPage.module.scss';
-import MoviePoster from '../../components/MoviePoster/MoviePoster';
+import MoviePoster from '../../components/MoviePoster';
 
 function CategoryMoviesPage({
   movies, totalPages, currentPage, onChangePage, title,

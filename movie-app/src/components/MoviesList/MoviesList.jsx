@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import style from './MoviesList.module.scss';
-import MoviePoster from '../MoviePoster/MoviePoster';
-import Loader from '../Loader/Loader';
+import MoviePoster from '../MoviePoster';
+import Loader from '../Loader';
 
 function MoviesList({ title, path, movies }) {
   if (movies.length === 0) return <Loader />;
