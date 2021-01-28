@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Portal from '../index';
-import { shallow } from 'enzyme';
+import Portal from '../Portal';
 
 const setUp = () => shallow(
   <Portal>

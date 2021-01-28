@@ -1,6 +1,5 @@
 import React from 'react';
-import Overlay from '../index';
-import { shallow } from 'enzyme';
+import Overlay from '../Overlay';
 
 describe('Overlay component', () => {
   it('should contain .overlay ', () => {

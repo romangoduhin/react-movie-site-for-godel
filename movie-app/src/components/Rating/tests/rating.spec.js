@@ -1,6 +1,5 @@
 import React from 'react';
-import Rating from '../index';
-import { shallow } from 'enzyme';
+import Rating from '../Rating';
 
 const props = {
   vote: 2,
