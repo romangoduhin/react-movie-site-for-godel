@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Portal from '../index';
-
+import Enzyme from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { shallow, mount, render } from 'enzyme';
+Enzyme.configure({ adapter: new Adapter() });
 const setUp = () => shallow(
   <Portal>
     <div>test window</div>
