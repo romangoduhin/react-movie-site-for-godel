@@ -64,7 +64,7 @@ function NavBar() {
         <div className={isSearchOpen ? `${style.menuBlock} ${style.menuBlockClose}` : style.menuBlock}>
           <BurgerIcon onClick={switchMenuToggle} className={style.burgerIcon} />
 
-          <div
+          <nav
             role="presentation"
             onClick={switchMenuToggle}
             className={isMenuOpen ? `${style.burgerMenu} ${style.burgerMenuOpen}` : `${style.burgerMenu} ${style.burgerMenuClose}`}
@@ -84,7 +84,7 @@ function NavBar() {
                   <NavLink to="/signup">Sign up</NavLink>
                 </>
               )}
-          </div>
+          </nav>
 
           <div className={style.title}>
             <NavLink to="/movies">Moo Oui.com</NavLink>

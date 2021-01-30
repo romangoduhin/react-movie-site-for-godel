@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import style from './MoviesPage.module.scss';
 import MoviesList from '../../components/MoviesList';
 import Loader from '../../components/Loader';
@@ -8,8 +8,8 @@ import ModalWindow from '../../components/ModalWindow';
 import PlayButton from '../../components/PlayButton';
 
 function MoviesPage({
-  nowPlaying, topRated, popular, upcoming,
-}) {
+                      nowPlaying, topRated, popular, upcoming,
+                    }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openedMovieId, setOpenedMovieId] = useState(null);
 
@@ -19,15 +19,15 @@ function MoviesPage({
 
   return (
     <div className={style.wrapper}>
-      <div className={style.upcomingMovieWrapper}>
+      <header className={style.upcomingMovieWrapper}>
         <div className={style.upcomingMovie}>
           {upcoming[1].backdrop_path ? (
-            <img
-              src={`https://image.tmdb.org/t/p/w1280/${upcoming[1].backdrop_path}`}
-              alt="Upcoming Movie"
-            />
-          )
-            : <Loader />}
+              <img
+                src={`https://image.tmdb.org/t/p/w1280/${upcoming[1].backdrop_path}`}
+                alt="Upcoming Movie"
+              />
+            )
+            : <Loader/>}
 
           <div className={style.description}>
             <div className={style.overlay}>
@@ -45,10 +45,10 @@ function MoviesPage({
                 />
 
                 {isModalOpen && (
-                <ModalWindow
-                  movieId={openedMovieId}
-                  handleOpenTrailer={handleOpenTrailer}
-                />
+                  <ModalWindow
+                    movieId={openedMovieId}
+                    handleOpenTrailer={handleOpenTrailer}
+                  />
                 )}
               </div>
 
@@ -64,11 +64,13 @@ function MoviesPage({
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      <MoviesList title="Now Playing" path="movies/category/nowplaying" movies={nowPlaying} />
-      <MoviesList title="Top Rated" path="movies/category/toprated" movies={topRated} />
-      <MoviesList title="Popular" path="movies/category/popular" movies={popular} />
+      <main>
+        <MoviesList title="Now Playing" path="movies/category/nowplaying" movies={nowPlaying}/>
+        <MoviesList title="Top Rated" path="movies/category/toprated" movies={topRated}/>
+        <MoviesList title="Popular" path="movies/category/popular" movies={popular}/>
+      </main>
     </div>
   );
 }

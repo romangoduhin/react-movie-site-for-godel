@@ -10,21 +10,21 @@ function MoviesList({ title, path, movies }) {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.categoryTitle}>
+      <header className={style.categoryTitle}>
         <div className={style.title}>{title}</div>
 
         <span>category</span>
-      </div>
+      </header>
 
-      <div className={style.moviesList}>
+      <main className={style.moviesList}>
         {movies.slice(0, 5).map((movie) => <MoviePoster key={movie.id} movie={movie} />)}
-      </div>
+      </main>
 
-      <div className={style.buttonBlock}>
+      <footer className={style.buttonBlock}>
         <NavLink to={path}>
           <button type="button">More</button>
         </NavLink>
-      </div>
+      </footer>
     </div>
   );
 }
