@@ -25,8 +25,8 @@ function CategoryMoviesPage({
 
   return (
     <div className={style.wrapper}>
-      <div className={style.categoryTitle}>
-        <p>{title}</p>
+      <header className={style.categoryTitle}>
+        <h3>{title}</h3>
 
         {title === 'Top Rated' ? '' : (
           <button
@@ -39,18 +39,18 @@ function CategoryMoviesPage({
             vote
           </button>
         )}
-      </div>
+      </header>
 
-      <div className={style.moviePoster}>
+      <main className={style.moviePoster}>
         {(sorted === false ? sortByVote() : movies).slice(0, 18).map((movie) => (
           <div key={movie.id} className={style.movie}>
             <MoviePoster movie={movie} />
           </div>
         ))}
-      </div>
+      </main>
 
       {(title !== 'Searching') ? (
-        <div className={style.pageList}>
+        <footer className={style.pageList}>
           {pages.map((page) => (
             <span
               role="presentation"
@@ -63,7 +63,7 @@ function CategoryMoviesPage({
               {page}
             </span>
           ))}
-        </div>
+        </footer>
       ) : ''}
     </div>
   );

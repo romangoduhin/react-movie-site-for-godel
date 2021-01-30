@@ -15,7 +15,7 @@ function MovieIndexPage({ movie, reviews }) {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.trailerBlock}>
+      <header className={style.trailerBlock}>
         {movie.backdrop_path ? (
           <img
             src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
@@ -30,20 +30,20 @@ function MovieIndexPage({ movie, reviews }) {
           {isModalOpen
           && <ModalWindow movieId={movie.id} handleOpenTrailer={handleOpenTrailer} />}
         </div>
-      </div>
+      </header>
 
-      <div className={style.descriptionBlock}>
+      <main className={style.descriptionBlock}>
         <div className={style.description}>
-          <div className={style.titleAndBudget}>
+          <section className={style.titleAndBudget}>
             <span className={style.title}>{movie.title}</span>
 
             <span className={style.budget}>
               {movie.budget}
               $
             </span>
-          </div>
+          </section>
 
-          <div className={style.movieInfo}>
+          <section className={style.movieInfo}>
             <div className={style.ratingAndRuntime}>
               <Rating vote={movie.vote_average} />
 
@@ -59,9 +59,9 @@ function MovieIndexPage({ movie, reviews }) {
                 ))}
               </div>
             )}
-          </div>
+          </section>
 
-          <div className={style.otherInfo}>
+          <section className={style.otherInfo}>
             <div className={style.prodCountries}>
               <p>Countries</p>
 
@@ -96,12 +96,12 @@ function MovieIndexPage({ movie, reviews }) {
 
               <div>{movie.overview}</div>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
 
       {reviews.length === 0 ? 'No reviews' : (
-        <div className={style.reviewsBlock}>
+        <footer className={style.reviewsBlock}>
           {reviews.slice(0, 10).map((review) => (
             <div className={style.reviews} key={review.id}>
               <div className={style.author}>
@@ -113,7 +113,7 @@ function MovieIndexPage({ movie, reviews }) {
               <div className={style.content}>{review.content}</div>
             </div>
           ))}
-        </div>
+        </footer>
       )}
     </div>
   );

@@ -77,7 +77,7 @@ function AuthPage({ path }) {
   return (
     <div className={style.wrapper}>
       <div className={style.authBlock}>
-        <div className={style.title}>{path === 'login' ? 'login' : 'signup'}</div>
+        <h1 className={style.title}>{path === 'login' ? 'login' : 'signup'}</h1>
 
         <div className={style.inputWrapper}>
           <label htmlFor="email" className={style.label}>
